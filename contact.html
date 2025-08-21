@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contacts · MEREF‑SFD</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <meta name="description" content="Site vitrine — MEREF‑SFD"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar" aria-label="Navigation principale">
+     <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
+        <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40"  loading="lazy" />
+        <span class="logo-title">MEREF-SFD</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        ☰ <span class="sr-only">Ouvrir le menu</span>
+      </button>
+
+      <div id="primary-nav" class="nav-links">
+        <a href="index.html" class="active" aria-current="page">Accueil</a>
+        <a href="apropos.html">À&nbsp;propos</a>
+        <a href="espace-sfd.html">Espace&nbsp;SFD</a>
+        <a href="projets.html">Projets</a>
+        <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
+        <a href="ministre.html">Suivre&nbsp;le&nbsp;Ministre</a>
+        <a href="contact.html">Contacts</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class='section'>
+  <div class='container'>
+    <h1>Contacts</h1>
+    <p class="small">Mettez ici vos informations officielles de contact.</p>
+    <form class="grid" onsubmit="alert('Formulaire fictif. Connectez un service email/Back-end.'); return false;">
+      <div class="card" style="grid-column: span 6;">
+        <div class="body">
+          <label>Nom<br/><input required type="text" style="width:100%%;padding:10px;border:1px solid #cbd5e1;border-radius:10px"/></label>
+        </div>
+      </div>
+      <div class="card" style="grid-column: span 6;">
+        <div class="body">
+          <label>Email<br/><input required type="email" style="width:100%%;padding:10px;border:1px solid #cbd5e1;border-radius:10px"/></label>
+        </div>
+      </div>
+      <div class="card" style="grid-column: span 12;">
+        <div class="body">
+          <label>Message<br/><textarea required rows="6" style="width:100%%;padding:10px;border:1px solid #cbd5e1;border-radius:10px"></textarea></label>
+          <div style="margin-top:12px">
+            <button style="background:var(--primary);color:#fff;border:0;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer">Envoyer</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>MEREF‑SFD</h4>
+        <p class="small">Remplacez ce texte par une description officielle de votre mission et de vos activités.</p>
+      </div>
+      <div>
+        <h4>Liens</h4>
+        <p class="small"><a href="apropos.html">À propos</a><br/>
+        <a href="projets.html">Projets</a><br/>
+        <a href="actualites.html">Actualités</a></p>
+      </div>
+      <div>
+        <h4>Contacts</h4>
+        <p class="small">Email&nbsp;: contact@votredomaine.ml<br/>Tél&nbsp;: +223 00 00 00 00<br/>Adresse&nbsp;: Bamako, Mali</p>
+      </div>
+    </div>
+    <hr class="sep"/>
+    <p class="small">© MEREF‑SFD • Tous droits réservés</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Accueil · MEREF-SFD</title>
+  <meta name="description" content="Site vitrine — MEREF-SFD" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="index.css" />
+
+  <!-- bootstrap -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <nav class="navbar" aria-label="Navigation principale">
+     <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
+      <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40"  loading="lazy" />
+        <span class="logo-title">MEREF-SFD</span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+        ☰ <span class="sr-only">Ouvrir le menu</span>
+      </button>
+
+      <div id="primary-nav" class="nav-links">
+        <a href="index.html" class="active" aria-current="page">Accueil</a>
+        <a href="apropos.html">À&nbsp;propos</a>
+        <a href="espace-sfd.html">Espace&nbsp;SFD</a>
+        <a href="projets.html">Projets</a>
+        <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
+        <a href="ministre.html">Suivre&nbsp;le&nbsp;Ministre</a>
+        <a href="contact.html">Contacts</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="contenu">
+  <!-- Hero -->
+<section class="hero" aria-label="Mises en avant">
+  <div class="hero-slider" aria-live="polite">
+    <div class="hero-slide active" style="--bg: url('./assets/hero-1.jpg')" aria-hidden="false">
+      <div class="container">
+        <span class="badge">Annonce</span>
+        <h1>Joyeux anniversaire au MEREF-SFD</h1>
+        <p>Un carrousel d’accueil simple que vous pouvez éditer depuis le fichier <strong>index.html</strong>.</p>
+      </div>
+    </div>
+
+    <div class="hero-slide" style="--bg: url('./assets/hero-2.jpg')" aria-hidden="true">
+      <div class="container">
+        <span class="badge">Programme</span>
+        <h1>Lancement officiel de N’GNA SÔRÔ</h1>
+        <p>Remplacez ce texte par le contenu réel de votre événement.</p>
+      </div>
+    </div>
+
+    <div class="hero-slide" style="--bg: url('./assets/hero-3.jpg')" aria-hidden="true">
+      <div class="container">
+        <span class="badge">Mission</span>
+        <h1>Renforcer l’écosystème de la microfinance</h1>
+        <p>Texte d’intention court, non contractuel, à personnaliser.</p>
+      </div>
+    </div>
+
+    <div class="hero-controls" role="tablist" aria-label="Contrôles du carrousel">
+      <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+      <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+      <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+    </div>
+  </div>
+</section>
+
+  <!-- Chiffres clés -->
+  <section class="section alt" aria-labelledby="stats-title">
+    <div class="container">
+      <h2 id="stats-title">CHIFFRES CLES</h2>
+      <div class="stats">
+        <div class="stat">
+          <div class="num" data-count-to="19">0</div>
+          <div class="label">SFD partenaires</div>
+          <div class="small">dont 17 refinancés</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-count-to="642488">0</div>
+          <div class="label">Bénéficiaires</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-count-to="7">0</div>
+          <div class="label">Banques partenaires</div>
+        </div>
+        <div class="stat">
+          <div class="num" data-count-to="15">0</div>
+          <div class="label">Projets</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partenaires -->
+ <section class="section" aria-labelledby="partenaires-title">
+  <div class="container">
+    <h2 id="partenaires-title">PARTENAIRES</h2>
+
+    <div class="partners">
+      <a class="partner" href="https://www.ifad.org/fr/w/pays/mali" target="_blank" rel="noopener noreferrer"
+         style="--logo:url('assets/fida.png')"
+         aria-label="Partenaire 1"></a>
+
+      <a class="partner" href="https://www.microfinance.ml" target="_blank" rel="noopener noreferrer"
+         style="--logo:url('assets/CPA SFD.png')"
+         aria-label="CPA / SFD"></a>
+
+      <a class="partner" href="https://mali.um.dk/om-mali" target="_blank" rel="noopener noreferrer"
+         style="--logo:url('assets/danida.png')"
+         aria-label="Partenaire 2"></a>
+
+      <a class="partner" href="https://inclusifmali.org/" target="_blank" rel="noopener noreferrer"
+         style="--logo:url('assets/projet Inclusif.png')"
+         aria-label="Partenaire 3"></a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Actualités & Publications (cartes + vidéos responsives) -->
+<section class="section alt" aria-labelledby="actus-title">
+  <div class="container">
+    <h2 id="actus-title">Actualités &amp; Publications</h2>
+
+    <div class="row g-3 g-md-4 align-items-stretch">
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/cZFwcSTunlM?rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+              title="4ème Comité du MEREF-SFD"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="card-body body">
+            <h3 class="h6 mb-2">4ème Comité du MEREF-SFD</h3>
+            <a href="actualites.html">Lire</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/8m1p3xlsTFg?rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+              title="Film bilan du MEREF-SFD"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="card-body body">
+            <h3 class="h6 mb-2">Film bilan du MEREF-SFD</h3>
+            <a href="actualites.html">Lire</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-12 col-md-6 col-lg-4">
+        <article class="card h-100 shadow-sm">
+          <div class="ratio ratio-16x9">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/qCWnXwnnaEA?rel=0&modestbranding=1&playsinline=1&enablejsapi=1"
+              title="N’GNA SÔRÔ — Présentation"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+          </div>
+          <div class="card-body body">
+            <h3 class="h6 mb-2">N’GNA SÔRÔ MEREF-SFD</h3>
+            <a href="actualites.html">Lire</a>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- CTA -->
+  <section class="container">
+    <div class="cta" aria-labelledby="cta-title">
+      <div>
+        <h3 id="cta-title">Vous êtes un SFD partenaire ?</h3>
+        <p class="small">Accédez à votre espace dédié pour les documents et outils.</p>
+      </div>
+      <a class="button" href="espace-sfd.html">Accéder à l’Espace SFD</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <h4>MEREF-SFD</h4>
+        <p class="small">Remplacez ce texte par une description officielle de votre mission et de vos activités.</p>
+      </div>
+      <div>
+        <h4>Liens</h4>
+        <p class="small">
+          <a href="apropos.html">À propos</a><br />
+          <a href="projets.html">Projets</a><br />
+          <a href="actualites.html">Actualités</a>
+        </p>
+      </div>
+      <div>
+        <h4>Contacts</h4>
+        <p class="small">
+          Email&nbsp;: <a href="mailto:contact@votredomaine.ml">contact@votredomaine.ml</a><br />
+          Tél&nbsp;: +223 00 00 00 00<br />
+          Adresse&nbsp;: Bamako, Mali
+        </p>
+      </div>
+    </div>
+    <hr class="sep" />
+    <p class="small">© MEREF-SFD • Tous droits réservés</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
