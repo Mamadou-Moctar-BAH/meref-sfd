@@ -1,5 +1,5 @@
 :root{
-  --primary: #73b01d;
+  --primary: #0f7a56;;
   --accent: #f4b300;
   --dark: #0f1e16;
   --light: #f7faf8;
@@ -52,7 +52,6 @@ header.site-header {
 
 /* Hero */
 
-:root { --primary:#0f7a56; }
   .hero { position: relative; overflow: hidden; color: #fff; }
   .hero-slider { position: relative; height: 420px; }
 
