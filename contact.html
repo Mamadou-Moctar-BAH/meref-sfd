@@ -25,10 +25,9 @@
       <div id="primary-nav" class="nav-links">
         <a href="index.html" class="active" aria-current="page">Accueil</a>
         <a href="apropos.html">Présentation</a>
-        <a href="espace-sfd.html">Espace&nbsp;SFD</a>
-        <a href="projets.html">Projets</a>
+         <a href="espace-sfd.html">Cartographie&nbsp;SFD</a>
         <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
-        <a href="ministre.html">Suivre&nbsp;le&nbsp;Ministre</a>
+        <a href="galerie.html">Galerie</a>
         <a href="contact.html">Contacts</a>
       </div>
     </nav>
@@ -39,49 +38,59 @@
   <img src="assets/meref.png" alt="Description de l'image" class="banner-img" />
 </section>
 
-<section class='section'>
-  <div class='container'>
-    <h1>Contacts</h1>
-    <p class="small">informations officielles de contact.</p>
-    <form class="grid" onsubmit="alert('Formulaire fictif. Connectez un service email/Back-end.'); return false;">
-      <div class="card" style="grid-column: span 6;">
-        <div class="body">
-          <label>Nom<br/><input required type="text" style="width:100%%;padding:10px;border:1px solid #cbd5e1;border-radius:10px"/></label>
-        </div>
-      </div>
-      <div class="card" style="grid-column: span 6;">
-        <div class="body">
-          <label>Email<br/><input required type="email" style="width:100%%;padding:10px;border:1px solid #cbd5e1;border-radius:10px"/></label>
-        </div>
-      </div>
-      <div class="card" style="grid-column: span 12;">
-        <div class="body">
-          <label>Message<br/><textarea required rows="6" style="width:100%%;padding:10px;border:1px solid #cbd5e1;border-radius:10px"></textarea></label>
-          <div style="margin-top:12px">
-            <button style="background:var(--primary);color:#fff;border:0;padding:10px 16px;border-radius:12px;font-weight:700;cursor:pointer">Envoyer</button>
+<br/>
+
+<div class="container contact-form-container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card contact-info-card">
+          <div class="card-body">
+            <p><strong>Adresse :</strong> Hamdallaye (ACI 2000), Rue 435, Bamako, Mali</p>
+            <p><strong>Téléphone :</strong> +223 20 29 40 31</p>
+            <p><strong>Email :</strong> infosmerefsfd@gmail.com</p>
+            <p><strong>Lundi - Vendredi :</strong> 08:00 - 17:00</p>
+            <h3>Localisation</h3>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.2751020064475!2d-8.027427399999999!3d12.6299491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe51cdf3a414b37d%3A0x1cdf56cd7d0ec762!2sMEREF-SFD!5e0!3m2!1sfr!2sml!4v1756657545579!5m2!1sfr!2sml" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </div>
       </div>
-    </form>
+      <div class="col-md-6">
+        <form id="contact-form">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" rows="3" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+        </form>
+      </div>
+    </div>
   </div>
-</section>
 
-<footer class="site-footer">
+
+ <footer class="site-footer">
   <div class="container">
     <div class="cols">
       <div>
         <h4>MEREF‑SFD</h4>
-        <p class="small">Remplacez ce texte par une description officielle de votre mission et de vos activités.</p>
+        <p class="small">Le développement du secteur de la micro finance est un axe stratégique majeur dans les politiques publiques de mise en œuvre de la vision du gouvernement pour bâtir un Mali nouveau.</p>
       </div>
       <div>
         <h4>Liens</h4>
-        <p class="small"><a href="apropos.html">À propos</a><br/>
-        <a href="projets.html">Projets</a><br/>
-        <a href="actualites.html">Actualités</a></p>
+        <p class="small"><a href="apropos.html">Présentation</a><br/>
+        <a href="actualites.html">Actualités et Publications</a><br/>
+        <a href="contact.html">Contacts</a></p>
       </div>
       <div>
         <h4>Contacts</h4>
-        <p class="small">Email&nbsp;: contact@votredomaine.ml<br/>Tél&nbsp;: +223 00 00 00 00<br/>Adresse&nbsp;: Bamako, Mali</p>
+        <p class="small">Email&nbsp;: infosmerefsfd@gmail.com<br/>Tél&nbsp;: +223 20 29 40 31<br/>Adresse&nbsp;: Bamako, Mali</p>
       </div>
     </div>
     <hr class="sep"/>

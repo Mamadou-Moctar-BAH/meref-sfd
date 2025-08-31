@@ -67,6 +67,109 @@ header.site-header {
   object-position: center; /* centre l’image */
 }
 
+/* Title */
+h2 {
+  text-align: center;
+  color: #0f7a56;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+/* Contact Card */
+.contact-info-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.contact-info-card h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  color: #0f7a56;
+}
+
+/* Contact Form */
+form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form .mb-3 {
+  margin-bottom: 20px;
+}
+
+form label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+form .form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form .form-control:focus {
+  border-color: #0f7a56;
+  box-shadow: 0 0 5px rgba(21, 255, 0, 0.603);
+}
+
+button[type="submit"] {
+  background-color: #6a994e;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0f7a56;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-info-card {
+    padding: 15px;
+  }
+
+  form {
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Google Maps iframe */
+iframe {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 300px;
+  margin-top: 20px;
+}
+
+
 /* Footer */
 footer.site-footer { background: var(--dark); color: #cbd5e1; padding: 30px 0; margin-top: 40px; }
 footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 18px; }
@@ -82,7 +185,7 @@ hr.sep { border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0; }
   .nav-toggle { display: block; }
   .nav-links { display: none; flex-direction: column; width: 100%; padding: 10px 0; }
   .nav-links.open { display: flex; }
-
+  footer .cols { grid-template-columns: 1fr; }
 }
 
 /* Nav : jamais de soulignement */

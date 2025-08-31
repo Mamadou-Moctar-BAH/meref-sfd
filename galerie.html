@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Cartographie SFD · MEREF‑SFD</title>
-  <link rel="stylesheet" href="espace-sfd.css"/>
+  <title>Galerie</title>
+  <link rel="stylesheet" href="galerie.css"/>
    <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
   <meta name="description" content="Site vitrine — MEREF‑SFD"/>
@@ -38,25 +38,13 @@
   <img src="assets/meref.png" alt="Description de l'image" class="banner-img" />
 </section>
 
-<div class="map-embed">
-  <iframe
-    class="map-embed__frame"
-    title="Carte Google My Maps"
-    aria-label="Carte Google My Maps - affichage intégré"
-    src="https://www.google.com/maps/d/embed?mid=1Y7ZZy7T2YcDeyhPuNjjHn8czx7krO-k&ll=14.288694462106552,-6.4118490999999835&z=8&hl=fr"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    allowfullscreen
-  ></iframe>
-
-  <!-- Lien optionnel pour ouvrir la carte dans un nouvel onglet -->
-  <a
-    class="map-embed__open"
-    href="https://www.google.com/maps/d/u/0/edit?mid=1Y7ZZy7T2YcDeyhPuNjjHn8czx7krO-k&ll=14.288694462106552%2C-6.4118490999999835&z=8"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Ouvrir dans Google Maps</a>
-</div>
+<section class='section'>
+    <div class='container'>
+      <div class="gallery" id="photoGallery">
+        <!-- Les images seront générées ici par JavaScript -->
+      </div>
+    </div>
+  </section>
 
  <footer class="site-footer">
   <div class="container">
@@ -65,7 +53,7 @@
         <h4>MEREF‑SFD</h4>
         <p class="small">Le développement du secteur de la micro finance est un axe stratégique majeur dans les politiques publiques de mise en œuvre de la vision du gouvernement pour bâtir un Mali nouveau.</p>
       </div>
-     <div>
+      <div>
         <h4>Liens</h4>
         <p class="small"><a href="apropos.html">Présentation</a><br/>
         <a href="actualites.html">Actualités et Publications</a><br/>
@@ -81,7 +69,10 @@
   </div>
 </footer>
 
-<script src="espace-sfd.js"></script>
+<!-- Bootstrap JS et dépendances -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="galerie.js"></script>
 
 </body>
 </html>

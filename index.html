@@ -30,10 +30,9 @@
       <div id="primary-nav" class="nav-links">
         <a href="index.html" class="active" aria-current="page">Accueil</a>
         <a href="apropos.html">Présentation</a>
-        <a href="espace-sfd.html">Espace&nbsp;SFD</a>
-        <a href="projets.html">Projets</a>
+         <a href="espace-sfd.html">Cartographie&nbsp;SFD</a>
         <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
-        <a href="ministre.html">Suivre&nbsp;le&nbsp;Ministre</a>
+        <a href="galerie.html">Galerie</a>
         <a href="contact.html">Contacts</a>
       </div>
     </nav>
@@ -44,43 +43,14 @@
   
   <!-- Hero -->
    
-  <section class="hero" aria-label="Mises en avant">
-  <div class="hero-slider" aria-live="polite">
-    <!-- SLIDE 1 (même rendu pour toutes) -->
-    <div class="hero-slide active" aria-hidden="false" style="--bg:url('assets/anniversaire.jpg')">
-      <div class="container">
-        <span class="badge">Annonce</span>
-        <h1>Joyeux anniversaire au MEREF-SFD</h1>
-        <p>Un carrousel d’accueil simple que vous pouvez éditer depuis le fichier <strong>index.html</strong>.</p>
-      </div>
-    </div>
-
-    <!-- SLIDE 2 -->
-    <div class="hero-slide" aria-hidden="true" style="--bg:url('assets/programme.jpg')">
-      <div class="container">
-        <span class="badge">Programme</span>
-        <h1>Lancement officiel de N’GNA SÔRÔ</h1>
-        <p>Remplacez ce texte par le contenu réel de votre événement.</p>
-      </div>
-    </div>
-
-    <!-- SLIDE 3 -->
-    <div class="hero-slide" aria-hidden="true" style="--bg:url('assets/mission.jpg')">
-      <div class="container">
-        <span class="badge">Mission</span>
-        <h1>Renforcer l’écosystème de la microfinance</h1>
-        <p>Texte d’intention court, non contractuel, à personnaliser.</p>
-      </div>
-    </div>
-
-    <!-- Contrôles -->
-    <div class="hero-controls" role="tablist" aria-label="Contrôles du carrousel">
-      <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-      <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-      <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-    </div>
+<aside class="affiche-annonce" aria-label="Annonce à la une" style="--bg:url('assets/anonce.jpg'); --accent:#18a957;">
+  <div class="affiche-overlay"></div>
+  <div class="affiche-container">
+    <span class="badge">Annonce</span>
+    <h1>Atelier de présentation du parcours de digitalisation du mécanisme de refinancement des systèmes financiers décentralisé MEREF-SFD a l’hôtel de l’Amitie de Bamako le 17 Avril 2025</h1>
   </div>
-</section>
+</aside>
+
 
   <!-- Chiffres clés -->
   <section class="section alt" aria-labelledby="stats-title">
@@ -108,6 +78,34 @@
     </div>
   </section>
 
+  <!-- Mot de ministre -->
+<section class="py-5 mot-ministre-section" aria-labelledby="mot-ministre-titre">
+  <div class="container">
+    <h2 id="stats-title" class="mb-4 text-center">LE MOT DU MINISTRE</h2>
+       <div class="mot-ministre">
+      <!-- Photo + légende à droite de la même colonne -->
+      <figure class="photo-droite">
+        <img src="assets/minitre.jpg"
+             alt="Monsieur Moussa Alassane Diallo, Ministre de l’industrie et du commerce du Mali">
+        <figcaption>
+          <strong>Monsieur Moussa Alassane Diallo</strong><br>
+          Ministre de l’industrie et du commerce du Mali
+        </figcaption>
+      </figure>
+
+      <!-- Texte (inchangé, corrigé juste pour les espaces insécables avant la ponctuation) -->
+      <p>Le développement du secteur de la micro finance est un axe stratégique majeur dans les politiques publiques de mise en œuvre de la vision du gouvernement pour bâtir un Mali nouveau.</p>
+
+      <p>Le MEREF – SFD est une initiative développée par le Gouvernement du Mali et les partenaires techniques et financiers le Fonds International de Développement Agricole (FIDA), à la suite du Programme Microfinance Rural (PMR) réalisé entre 2010-2018.</p>
+
+      <p>Le MEREF- SFD a été institué par le Décret n°2018-570 PM-RM du 16 juillet 2018 et lancé officiellement le 05 avril 2019.</p>
+
+      <p>La Politique Nationale de Développement de la Microfinance à travers l’axe 2 à savoir "protéger les clients et favoriser un accès large et diversifié aux services financiers » dont l’objectif spécifique 2.5 vise à « Développer et mettre à la disposition des SFD, un mécanisme de financements innovants, fiables, assorti de moyens pour couvrir une demande plus importante  des populations » à travers la mise en place de lignes de crédits pour les femmes, les jeunes et les Agriculteurs.</p>
+
+      <p>Le MEREF-SFD a vocation à contribuer pleinement à l’atteinte de cet objectif avec un fonds de dotation initial de 4,368 milliards FCFA en 2018 qui sera porté à  8.368 milliards FCFA en fin d’année 2019.</p>
+    </div>
+  </div>
+</section>
   <!-- Partenaires -->
 <section class="py-5" aria-labelledby="partenaires-title">
   <div class="container">
@@ -234,39 +232,39 @@
         <h3 id="cta-title">Vous êtes un SFD partenaire ?</h3>
         <p class="small">Accédez à votre espace dédié pour les documents et outils.</p>
       </div>
-      <a class="button" href="espace-sfd.html">Accéder à l’Espace SFD</a>
+      <a class="button" href="espace-sfd.html">Accéder à la cartographie SFD</a>
     </div>
   </section>
 </main>
 
-<footer class="site-footer">
+ <!-- Footer -->
+  
+ <footer class="site-footer">
   <div class="container">
     <div class="cols">
       <div>
-        <h4>MEREF-SFD</h4>
-        <p class="small">Remplacez ce texte par une description officielle de votre mission et de vos activités.</p>
+        <h4>MEREF‑SFD</h4>
+        <p class="small">Le développement du secteur de la micro finance est un axe stratégique majeur dans les politiques publiques de mise en œuvre de la vision du gouvernement pour bâtir un Mali nouveau.</p>
       </div>
       <div>
         <h4>Liens</h4>
-        <p class="small">
-          <a href="apropos.html">À propos</a><br />
-          <a href="projets.html">Projets</a><br />
-          <a href="actualites.html">Actualités</a>
-        </p>
+        <p class="small"><a href="apropos.html">Présentation</a><br/>
+        <a href="actualites.html">Actualités et Publications</a><br/>
+        <a href="contact.html">Contacts</a></p>
       </div>
       <div>
         <h4>Contacts</h4>
-        <p class="small">
-          Email&nbsp;: <a href="mailto:contact@votredomaine.ml">contact@votredomaine.ml</a><br />
-          Tél&nbsp;: +223 00 00 00 00<br />
-          Adresse&nbsp;: Bamako, Mali
-        </p>
+        <p class="small">Email&nbsp;: infosmerefsfd@gmail.com<br/>Tél&nbsp;: +223 20 29 40 31<br/>Adresse&nbsp;: Bamako, Mali</p>
       </div>
     </div>
-    <hr class="sep" />
-    <p class="small">© MEREF-SFD • Tous droits réservés</p>
+    <hr class="sep"/>
+    <p class="small">© MEREF‑SFD • Tous droits réservés</p>
   </div>
 </footer>
+
+
+  <!-- Lien vers le script Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 <script src="index.js"></script>
 </body>

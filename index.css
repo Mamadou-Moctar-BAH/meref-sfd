@@ -1,5 +1,5 @@
 :root{
-  --primary: #0f7a56;;
+  --primary: #0f7a56;
   --accent: #f4b300;
   --dark: #0f1e16;
   --light: #f7faf8;
@@ -17,7 +17,7 @@ html, body {
 
 img, iframe { max-width: 100%; height: auto; display: block; }
 a { color: var(--primary); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a:hover { text-decoration: none;}
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden;
@@ -52,51 +52,115 @@ header.site-header {
 
 /* Hero */
 
-  .hero { position: relative; overflow: hidden; color: #fff; }
-  .hero-slider { position: relative; height: 420px; }
+.affiche-annonce{
+  position: relative;
+  isolation: isolate;                 /* garantit que l’overlay reste interne */
+  min-height: clamp(300px, 42vw, 560px);
+  display: grid;
+  place-items: center;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  color: #fff;
+  background:
+    radial-gradient(1200px 500px at 15% 15%, rgba(0,0,0,.35), transparent 60%),
+    radial-gradient(1000px 500px at 85% 85%, rgba(0,0,0,.35), transparent 60%),
+    #0b0f14;
+  overflow: clip;
+}
 
-  /* Slides : même gabarit pour toutes */
-  .hero-slide{
-    position:absolute; inset:0;
-    display:grid; place-items:center;
-    text-align:center; padding:0 20px;
-    opacity:0; transition:opacity .6s ease;
-  }
-  .hero-slide.active{ opacity:1; }
+/* Image de fond via variable --bg */
+.affiche-annonce::before{
+  content:"";
+  position:absolute; inset:0;
+  background-image: var(--bg);
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.05);
+  transform: scale(1.03);             /* évite les bordures blanches au redimensionnement */
+  z-index: -2;
+}
 
-  /* Image d’arrière-plan identique pour toutes les slides (même traitement) */
-  .hero-slide::before{
-    content:""; position:absolute; inset:0; z-index:-2;
-    background-image: var(--bg);
-    background-size: cover; background-position: center;
-    filter: brightness(.55); /* assombrit comme la slide 1 */
+/* Voile sombre pour la lisibilité du texte */
+.affiche-overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(7,12,16,.55), rgba(7,12,16,.35) 45%, rgba(7,12,16,.7));
+  z-index: -1;
+}
+
+/* Contenant du texte */
+.affiche-container{
+  width: min(1100px, 92vw);
+  padding: clamp(1rem, 2.5vw, 2rem);
+  backdrop-filter: blur(1px);
+}
+
+/* Badge “Annonce” */
+.badge{
+  display:inline-block;
+  padding:.5rem .75rem;
+  border-radius: calc(var(--radius) - .35rem);
+  font:600 .85rem/1 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  letter-spacing:.04em;
+  text-transform: uppercase;
+  color:#0b0f14;
+  background: linear-gradient(180deg, #fff, #f3f3f3);
+  border: 1px solid rgba(255,255,255,.65);
+  box-shadow: 0 1px 0 rgba(0,0,0,.1), inset 0 0 0 1px rgba(255,255,255,.5);
+}
+
+/* Titre principal */
+.affiche-container h1{
+  margin:.75rem 0 0;
+  text-shadow: 0 2px 18px rgba(0,0,0,.45);
+}
+
+/* Empêche le retour à la ligne sur un segment précis */
+.nowrap{ white-space: nowrap; }
+
+/* Accessibilité – réduit les animations pour ceux qui les limitent */
+@media (prefers-reduced-motion: reduce){
+  .affiche-annonce, .badge, .affiche-container h1{ transition: none; }
+}
+
+/* Mot ministre */
+
+
+.mot-ministre-section .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+  .mot-ministre { line-height: 1.7; font-size: 1rem; color: #111; }
+  .mot-ministre .photo-droite {
+    float: right;                 /* place la photo à droite dans la même colonne */
+    width: min(50%, 500px);       /* largeur max de la photo */
+    margin: 0 0 1rem 1.25rem;     /* espace entre l’image et le texte */
   }
-  /* Voile dégradé au-dessus de l’image (identique partout) */
-  .hero-slide::after{
-    content:""; position:absolute; inset:0; z-index:-1;
-    background: linear-gradient(120deg, var(--primary), #178a62);
-    mix-blend-mode: multiply; opacity:.65;
+  .mot-ministre .photo-droite img {
+    width: 100%; height: 550px; display: block; border-radius: 12px;
+  }
+  .mot-ministre .photo-droite figcaption {
+    text-align: center; font-size: 0.9rem; margin-top: 0.5rem; color: #333;
+  }
+  .titre-section {
+    margin-bottom: 1rem;
+    color: rgba(28,102,75,1);     /* couleur d’origine */
+    font-size: 1.5rem;
   }
 
-  .hero .badge{
-    display:inline-block; padding:6px 10px; margin-bottom:10px;
-    background: rgba(255,255,255,.15);
-    border: 1px solid rgba(255,255,255,.35);
-    border-radius:999px; font-weight:600; letter-spacing:.3px;
-  }
-  .hero h1{ font-size:42px; margin:0 0 10px 0; }
-  .hero p{ opacity:.97; max-width:800px; margin:0 auto; }
+  /* Responsive : en mobile, on annule le float pour éviter un rendu trop serré */
+  @media (max-width: 768px) {
+    .mot-ministre .photo-droite { float: none; width: 100%; margin: 0 0 1rem 0; }
+    .mot-ministre .photo-droite figcaption { text-align: left; }
 
-  .hero-controls{
-    position:absolute; bottom:18px; left:50%;
-    transform:translateX(-50%); display:flex; gap:10px;
+    .mot-ministre .photo-droite img {
+    width: 100%; height: 300px; display: block; border-radius: 12px;
+    }
+    .mot-ministre .photo-droite figcaption {
+    text-align: center; font-size: 0.9rem; margin-top: 0.5rem; color: #333;
+    }
+    .titre-section {
+    margin-bottom: 1rem;
+    color: rgba(28,102,75,1);     /* couleur d’origine */
+    font-size: 1.5rem;
+    }
+
   }
-  .hero-dot{
-    width:12px; height:12px; border-radius:999px;
-    background:rgba(255, 255, 255, 0.5);
-    border:1px solid rgba(255,255,255,.7); cursor:pointer;
-  }
-  .hero-dot.active{ background:#fff; }
 
 /* Sections */
 .section { padding: 60px 0; background: #fff; }
@@ -140,7 +204,10 @@ header.site-header {
 .cta a.button { background: #fff; color: var(--primary); padding: 10px 14px; border-radius: 12px; font-weight: 700; border: 2px solid transparent; }
 .cta a.button:hover { border-color: #fff; background: transparent; color: #fff; }
 
+
+
 /* Footer */
+
 footer.site-footer { background: var(--dark); color: #cbd5e1; padding: 30px 0; margin-top: 40px; }
 footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 18px; }
 footer h4 { color: #fff; margin-top: 0; }
@@ -148,6 +215,7 @@ footer a { color: #cbd5e1; }
 .badge { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 8px 12px; background: rgba(244,179,0,.12); color: #6b4a00; font-weight: 700; }
 .small { font-size: 14px; }
 hr.sep { border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0; }
+
 
 /* Spécifiques "Actualités & Publications" (vidéos responsives) */
 .section.alt .grid { grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
@@ -227,4 +295,8 @@ hr.sep { border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0; }
   border: 1px solid rgba(255,255,255,.35);
   color: #fff;
   font-size: .85rem;
+}
+
+.button{
+  text-decoration: none;
 }
