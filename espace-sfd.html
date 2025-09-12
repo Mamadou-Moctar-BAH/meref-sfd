@@ -10,11 +10,12 @@
   <meta name="description" content="Site vitrine — MEREF‑SFD"/>
 </head>
 <body>
+
 <header class="site-header">
   <div class="container">
     <nav class="navbar" aria-label="Navigation principale">
-     <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
-        <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40"  loading="lazy" />
+      <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
+        <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40" loading="lazy" />
         <span class="logo-title">MEREF-SFD</span>
       </a>
 
@@ -23,12 +24,52 @@
       </button>
 
       <div id="primary-nav" class="nav-links">
-        <a href="index.html" class="active" aria-current="page">Accueil</a>
-        <a href="apropos.html">Présentation</a>
-        <a href="espace-sfd.html">Cartographie&nbsp;SFD</a>
-        <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="contact.html">Contacts</a>
+        <a href="index.html" class="active" aria-current="page">ACCEUIL</a>
+
+        <div class="dropdown">
+  <a class="dropdown-toggle" href="#" id="aproposMenu"
+     role="button"
+     data-bs-toggle="dropdown"
+     data-bs-auto-close="outside"
+     aria-expanded="false" aria-haspopup="true">
+    A PROPOS
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="aproposMenu">
+    <li><a class="dropdown-item" href="presentation.html">PRESENTATION</a></li>
+    <li><a class="dropdown-item" href="service.html">SERVICE</a></li>
+
+    <!-- Sous-menu GALERIE -->
+    <li class="dropend">
+      <a class="dropdown-item dropdown-toggle" href="#"
+         id="galerieSubmenu" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+        GALERIE
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="galerieSubmenu">
+        <!-- (optionnel) lien vers la page générale -->
+        <li><a class="dropdown-item" href="photo.html">PHOTO</a></li>
+        <li><a class="dropdown-item" href="video.html">VIDEO</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="espace-sfd.html" id="espaceMenu"
+             data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            ESPACE&nbsp;SFD
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="espaceMenu">
+            <li><a class="dropdown-item" href="cartographie.html">CARTOGRAPHIE</a></li>
+            <li><a class="dropdown-item" href="repertoire.html">REPERTOIRE&nbsp;SFD</a></li>
+          </ul>
+        </div>
+        <a href="projets.html">PROJECT</a>
+        <a href="actualites.html">ACTUALITE&nbsp;&amp;&nbsp;PUBLICATION</a>
+        <a href="ministre.html">SUIVRE&nbsp;&amp;&nbsp;LE MINISTRE</a>
+        <a href="contact.html">CONTACT</a>
       </div>
     </nav>
   </div>

@@ -33,37 +33,41 @@ a:hover { text-decoration: underline; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* Header / Nav */
+
 header.site-header {
   position: sticky; top: 0; z-index: 50;
   background: #fff; border-bottom: 1px solid #e5e7eb;
 }
-.navbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 0; }
+
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 10px 0;
+}
+
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--primary); letter-spacing: .5px; }
 .logo img { width: 40px; height: 40px; border-radius: 6px; }
 
-.nav-links { display: flex; gap: 14px; flex-wrap: wrap; }
-.nav-links a { padding: 10px 12px; border-radius: 10px; font-weight: 600; color: #0f172a; }
-.nav-links a.active, .nav-links a:hover { background: rgba(10,107,74,.1); }
+/* 🔧 Ajout important : aligner verticalement tous les enfants (y compris le <div class="dropdown">) */
+.nav-links {
+  display: flex; gap: 0px; flex-wrap: wrap;
+  align-items: center; /* NEW */
+}
 
+/* Style uni pour tous les liens de nav (y compris le .dropdown-toggle) */
+.nav-links a {
+  padding: 10px 12px; border-radius: 10px; font-weight: 600; color: #0f172a; text-decoration: none;
+}
+.nav-links a.active,
+.nav-links a:hover { background: rgba(10,107,74,.1); }
+
+/* (Optionnel) S’assure que le wrapper dropdown s’aligne correctement */
+.nav-links .dropdown { display: flex; align-items: center; }
+
+/* Bouton burger */
 .nav-toggle {
   display: none; background: none; border: 0; font-size: 28px; line-height: 1; cursor: pointer;
 }
 
-/* Affiche */
-
-.banner-image {
-  position: relative;
-  overflow: hidden;   /* masque les débordements au recadrage */
-}
-
-/* Image en mode “cover” */
-.banner-image .banner-img {
-  display: block;
-  width: 100%;
-  height: 80%;
-  object-fit: cover;       /* remplit et recadre sans déformer */
-  object-position: center; /* centre l’image */
-}
 
 /* Presentation */
 

@@ -1,6 +1,5 @@
 :root{
   --primary:#0f7a56;
-  --accent: #f4b300;
   --dark: #0f1e16;
   --light: #f7faf8;
   --text: #1b2a22;
@@ -69,22 +68,152 @@ header.site-header {
   display: none; background: none; border: 0; font-size: 28px; line-height: 1; cursor: pointer;
 }
 
-/* Affiche */
+/* Presentation */
 
-/* Section bannière */
-.banner-image {
-  position: relative;
-  overflow: hidden;        /* masque les débordements au recadrage */
+.hero{
+  background: radial-gradient(1200px 600px at 50% -20%, rgba(13,110,253,.12), transparent),
+              linear-gradient(180deg, #f8f9fa 0%, #f8f9fa 100%);
 }
 
-/* Image en mode “cover” */
-.banner-image .banner-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;       /* remplit et recadre sans déformer */
-  object-position: center; /* centre l’image */
+.hero .lead{
+  color: #495057;
 }
+
+.nav-pills .nav-link{
+  border: 1px solid rgba(13,110,253,.15);
+}
+
+.nav-pills .nav-link:hover{
+  background-color: rgba(13,110,253,.08);
+}
+
+.content h2,
+.accordion-button{
+  letter-spacing: .2px;
+}
+
+.accordion-button{
+  font-weight: 600;
+}
+
+.accordion-button:not(.collapsed){
+  color: var(--brand);
+  background-color: rgba(13,110,253,.06);
+}
+
+.accordion-item{
+  border-radius: .75rem;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,.04);
+  margin-bottom: 1rem;
+}
+
+.accordion-body ul li{
+  margin-bottom: .4rem;
+}
+
+.alert-info{
+  border-left: 4px solid var(--brand);
+}
+
+.btn-outline-primary{
+  --bs-btn-bg: #fff;
+  --bs-btn-hover-bg: var(--brand);
+  --bs-btn-hover-color: #fff;
+}
+
+@media (min-width: 992px){
+  .hero .display-5{
+    font-size: 3rem;
+  }
+}
+
+/* Team */
+
+.team {
+        padding: 36px 0;
+        background-color: #f8f9fa;
+    }
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    h2 {
+        text-align: center;
+ 
+    }
+
+    /* Team Grid */
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+
+    @media (max-width: 900px) {
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .team-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Team Card Styles */
+    .team-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background: #fff;
+        transition: transform 0.18s ease, box-shadow 0.18s ease;
+        text-align: center;
+    }
+
+    .team-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Image Styles */
+    .team-photo {
+        width: 250%;
+        height: 300px; /* Fixed height for uniformity */
+        object-fit: cover; /* Ensures images cover the container without stretching */
+        border-radius: 10px;
+        margin-bottom: 16px;
+    }
+
+    .team-card h3 {
+        margin: 12px 0;
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+    .role {
+        margin: 8px 0;
+        font-weight: 600;
+        color: #475569;
+    }
+
+    .contact {
+        font-size: 0.95rem;
+        color: #6c757d;
+    }
+
+    .contact a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    .contact a:hover {
+        text-decoration: underline;
+    }
 
 /* Footer */
 footer.site-footer { background: var(--dark); color: #cbd5e1; padding: 30px 0; margin-top: 40px; }
@@ -94,7 +223,6 @@ footer a { color: #cbd5e1; }
 .badge { display: inline-flex; align-items: center; gap: 8px; border-radius: 999px; padding: 8px 12px; background: rgba(244,179,0,.12); color: #6b4a00; font-weight: 700; }
 .small { font-size: 14px; }
 hr.sep { border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0; }
-
 
 /* Réactif */
 @media (max-width: 900px) {
@@ -117,49 +245,3 @@ hr.sep { border: 0; border-top: 1px solid #e5e7eb; margin: 20px 0; }
 .site-header .nav-links a:hover {
   background: rgba(10,107,74,.1);
 }
-
-  /* Conteneur responsive : change la hauteur via aspect-ratio si besoin */
-  .map-embed {
-    --radius: 16px;
-    --shadow: 0 10px 24px rgba(0,0,0,.18);
-    position: relative;
-    width: 100%;
-    aspect-ratio: 16 / 9; /* Mets 4 / 3 ou 3 / 2 selon ta maquette */
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: var(--shadow);
-    background:
-      radial-gradient(120px 80px at 12% 8%, rgba(255,255,255,.18), transparent 60%),
-      linear-gradient(135deg, #22c55e, #3b82f6); /* léger fond en attendant le chargement */
-  }
-
-  .map-embed__frame {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    display: block;
-  }
-
-  /* Bouton flottant “Ouvrir” (facultatif) */
-  .map-embed__open {
-    position: absolute;
-    right: 12px;
-    top: 12px;
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(17,24,39,.75);
-    color: #fff;
-    text-decoration: none;
-    font-size: 12px;
-    line-height: 1;
-    backdrop-filter: blur(6px);
-    transition: transform .15s ease, opacity .15s ease;
-    opacity: .95;
-  }
-  .map-embed__open:hover { transform: translateY(-1px); opacity: 1; }
-
-  /* Mode sombre */
-  @media (prefers-color-scheme: dark) {
-    .map-embed { box-shadow: 0 10px 24px rgba(0,0,0,.45); }
-    .map-embed__open { background: rgba(255,255,255,.12); }
-  }

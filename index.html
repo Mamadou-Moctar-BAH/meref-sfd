@@ -6,6 +6,9 @@
   <title>Accueil · MEREF-SFD</title>
   <meta name="description" content="Site vitrine — MEREF-SFD" />
 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&display=swap" rel="stylesheet">
+
   <!-- Styles -->
   <link rel="stylesheet" href="index.css" />
 
@@ -18,9 +21,9 @@
 <header class="site-header">
   <div class="container">
     <nav class="navbar" aria-label="Navigation principale">
-     <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
-      <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40"  loading="lazy" />
-        <span >MEREF-SFD</span>
+      <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
+        <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40" loading="lazy" />
+        <span class="logo-title">MEREF-SFD</span>
       </a>
 
       <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
@@ -28,12 +31,52 @@
       </button>
 
       <div id="primary-nav" class="nav-links">
-        <a href="index.html" class="active" aria-current="page">Accueil</a>
-        <a href="apropos.html">Présentation</a>
-         <a href="espace-sfd.html">Cartographie&nbsp;SFD</a>
-        <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
-        <a href="galerie.html">Galerie</a>
-        <a href="contact.html">Contacts</a>
+        <a href="index.html" class="active" aria-current="page">ACCEUIL</a>
+
+        <div class="dropdown">
+  <a class="dropdown-toggle" href="#" id="aproposMenu"
+     role="button"
+     data-bs-toggle="dropdown"
+     data-bs-auto-close="outside"
+     aria-expanded="false" aria-haspopup="true">
+    A PROPOS
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="aproposMenu">
+    <li><a class="dropdown-item" href="presentation.html">PRESENTATION</a></li>
+    <li><a class="dropdown-item" href="service.html">SERVICE</a></li>
+
+    <!-- Sous-menu GALERIE -->
+    <li class="dropend">
+      <a class="dropdown-item dropdown-toggle" href="#"
+         id="galerieSubmenu" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+        GALERIE
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="galerieSubmenu">
+        <!-- (optionnel) lien vers la page générale -->
+        <li><a class="dropdown-item" href="photo.html">PHOTO</a></li>
+        <li><a class="dropdown-item" href="video.html">VIDEO</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="espace-sfd.html" id="espaceMenu"
+             data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            ESPACE&nbsp;SFD
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="espaceMenu">
+            <li><a class="dropdown-item" href="cartographie.html">CARTOGRAPHIE</a></li>
+            <li><a class="dropdown-item" href="repertoire.html">REPERTOIRE&nbsp;SFD</a></li>
+          </ul>
+        </div>
+        <a href="projets.html">PROJECT</a>
+        <a href="actualites.html">ACTUALITE&nbsp;&amp;&nbsp;PUBLICATION</a>
+        <a href="ministre.html">SUIVRE&nbsp;&amp;&nbsp;LE MINISTRE</a>
+        <a href="contact.html">CONTACT</a>
       </div>
     </nav>
   </div>
@@ -43,13 +86,13 @@
   
   <!-- Hero -->
    
-<aside class="affiche-annonce" aria-label="Annonce à la une" style="--bg:url('assets/anonce.jpg'); --accent:#18a957;">
-  <div class="affiche-overlay"></div>
-  <div class="affiche-container">
-    <span class="badge">Annonce</span>
-    <h1>Atelier de présentation du parcours de digitalisation du mécanisme de refinancement des systèmes financiers décentralisé MEREF-SFD a l’hôtel de l’Amitie de Bamako le 17 Avril 2025</h1>
-  </div>
-</aside>
+  <aside class="affiche-annonce" aria-label="Annonce à la une" style="--bg:url('assets/anonce.jpg'); --accent:#18a957;">
+    <div class="affiche-overlay"></div>
+    <div class="affiche-container">
+      <span class="badge">Annonce</span>
+      <h1>Atelier de présentation du parcours de digitalisation du mécanisme de refinancement des systèmes financiers décentralisé MEREF-SFD a l’hôtel de l’Amitie de Bamako le 17 Avril 2025</h1>
+    </div>
+  </aside>
 
 
   <!-- Chiffres clés -->
@@ -81,7 +124,7 @@
   <!-- Mot de ministre -->
 <section class="py-5 mot-ministre-section" aria-labelledby="mot-ministre-titre">
   <div class="container">
-    <h2 id="stats-title" class="mb-4 text-center">LE MOT DU MINISTRE</h2>
+    <h2 id="mot-ministre-titre" class="mb-4 text-center">LE MOT DU MINISTRE</h2>
        <div class="mot-ministre">
       <!-- Photo + légende à droite de la même colonne -->
       <figure class="photo-droite">
@@ -106,54 +149,47 @@
     </div>
   </div>
 </section>
+
   <!-- Partenaires -->
-<section class="py-5" aria-labelledby="partenaires-title">
+
+  <section class="py-5 partenaires" aria-labelledby="partenaires-title">
   <div class="container">
-    <h2 id="partenaires-title" class="mb-4 text-center">PARTENAIRES</h2>
+    <!-- Titre + bandeau de logos sur une seule ligne -->
+    <div class="partenaires-head d-flex flex-wrap align-items-end justify-content-between gap-3">
+      <h2 id="partenaires-title" class="m-0 titre-partenaires">Partenaires</h2>
 
-    <!-- Grille responsive Bootstrap -->
-    <div class="row g-3 g-sm-4">
-      <div class="col-6 col-md-4 col-lg-3">
+
+      <div class="logos d-flex flex-wrap align-items-end gap-3">
         <a
-          class="partner d-block ratio ratio-4x3"
+          class="partner-logo"
           href="https://www.ifad.org/fr/w/pays/mali"
-          target="_blank"
-          rel="noopener noreferrer"
+          target="_blank" rel="noopener noreferrer"
           style="--logo:url('assets/fida.png')"
-          aria-label="Partenaire 1"
+          aria-label="FIDA"
         ></a>
-      </div>
 
-      <div class="col-6 col-md-4 col-lg-3">
         <a
-          class="partner d-block ratio ratio-4x3"
+          class="partner-logo"
           href="https://www.microfinance.ml"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="--logo:url('assets/CPA SFD.png')"
+          target="_blank" rel="noopener noreferrer"
+          style="--logo:url('assets/CPA%20SFD.png')"
           aria-label="CPA / SFD"
         ></a>
-      </div>
 
-      <div class="col-6 col-md-4 col-lg-3">
         <a
-          class="partner d-block ratio ratio-4x3"
+          class="partner-logo"
           href="https://mali.um.dk/om-mali"
-          target="_blank"
-          rel="noopener noreferrer"
+          target="_blank" rel="noopener noreferrer"
           style="--logo:url('assets/danida.png')"
-          aria-label="Partenaire 2"
+          aria-label="DANIDA"
         ></a>
-      </div>
 
-      <div class="col-6 col-md-4 col-lg-3">
         <a
-          class="partner d-block ratio ratio-4x3"
+          class="partner-logo"
           href="https://inclusifmali.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="--logo:url('assets/projet Inclusif.png')"
-          aria-label="Partenaire 3"
+          target="_blank" rel="noopener noreferrer"
+          style="--logo:url('assets/projet%20Inclusif.png')"
+          aria-label="Projet INCLUSIF"
         ></a>
       </div>
     </div>
@@ -225,16 +261,6 @@
   </div>
 </section>
 
-  <!-- CTA -->
-  <section class="container">
-    <div class="cta" aria-labelledby="cta-title">
-      <div>
-        <h3 id="cta-title">Vous êtes un SFD partenaire ?</h3>
-        <p class="small">Accédez à votre espace dédié pour les documents et outils.</p>
-      </div>
-      <a class="button" href="espace-sfd.html">Accéder à la cartographie SFD</a>
-    </div>
-  </section>
 </main>
 
  <!-- Footer -->
@@ -264,7 +290,9 @@
 
 
   <!-- Lien vers le script Bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
 
 <script src="index.js"></script>
 </body>

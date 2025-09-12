@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Projets · MEREF‑SFD</title>
+  <title>project · MEREF-SFD</title>
   <link rel="stylesheet" href="projets.css"/>
-   <!-- bootstrap -->
+  <!-- bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-  <meta name="description" content="Site vitrine — MEREF‑SFD"/>
+  <meta name="description" content="Site vitrine — MEREF-SFD"/>
 </head>
 <body>
+
 <header class="site-header">
   <div class="container">
     <nav class="navbar" aria-label="Navigation principale">
-     <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
-        <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40"  loading="lazy" />
+      <a class="logo text-decoration-none" href="index.html" aria-label="MEREF-SFD">
+        <img src="./assets/logo.jpg" alt="Logo MEREF-SFD" width="40" height="40" loading="lazy" />
         <span class="logo-title">MEREF-SFD</span>
       </a>
 
@@ -23,45 +24,284 @@
       </button>
 
       <div id="primary-nav" class="nav-links">
-        <a href="index.html" class="active" aria-current="page">Accueil</a>
-       <a href="apropos.html">Présentation</a>
-        <a href="espace-sfd.html">Espace&nbsp;SFD</a>
-        <a href="projets.html">Projets</a>
-        <a href="actualites.html">Actualités&nbsp;&amp;&nbsp;Publications</a>
-        <a href="ministre.html">Suivre&nbsp;le&nbsp;Ministre</a>
-        <a href="contact.html">Contacts</a>
+        <a href="index.html" class="active" aria-current="page">ACCEUIL</a>
+
+        <div class="dropdown">
+  <a class="dropdown-toggle" href="#" id="aproposMenu"
+     role="button"
+     data-bs-toggle="dropdown"
+     data-bs-auto-close="outside"
+     aria-expanded="false" aria-haspopup="true">
+    A PROPOS
+  </a>
+
+  <ul class="dropdown-menu" aria-labelledby="aproposMenu">
+    <li><a class="dropdown-item" href="presentation.html">PRESENTATION</a></li>
+    <li><a class="dropdown-item" href="service.html">SERVICE</a></li>
+
+    <!-- Sous-menu GALERIE -->
+    <li class="dropend">
+      <a class="dropdown-item dropdown-toggle" href="#"
+         id="galerieSubmenu" role="button"
+         data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+        GALERIE
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="galerieSubmenu">
+        <!-- (optionnel) lien vers la page générale -->
+        <li><a class="dropdown-item" href="photo.html">PHOTO</a></li>
+        <li><a class="dropdown-item" href="video.html">VIDEO</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+        <div class="dropdown">
+          <a class="dropdown-toggle" href="espace-sfd.html" id="espaceMenu"
+             data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+            ESPACE&nbsp;SFD
+          </a>
+
+          <ul class="dropdown-menu" aria-labelledby="espaceMenu">
+            <li><a class="dropdown-item" href="cartographie.html">CARTOGRAPHIE</a></li>
+            <li><a class="dropdown-item" href="repertoire.html">REPERTOIRE&nbsp;SFD</a></li>
+          </ul>
+        </div>
+        <a href="projets.html">PROJECT</a>
+        <a href="actualites.html">ACTUALITE&nbsp;&amp;&nbsp;PUBLICATION</a>
+        <a href="ministre.html">SUIVRE&nbsp;&amp;&nbsp;LE MINISTRE</a>
+        <a href="contact.html">CONTACT</a>
       </div>
     </nav>
   </div>
 </header>
 
 <section class="banner-image">
-  <img src="assets/meref.png" alt="Description de l'image" class="banner-img" />
+  <img src="assets/meref.png" alt="Bannière MEREF-SFD" class="banner-img"/>
 </section>
 
-<section class='section'>
-  <div class='container'>
-    <h1>Projets</h1>
-   
-  </div>
-</section>
+<main id="contenu">
+  
+  <!-- Grille d’actus -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row row-cols-1 g-4" role="feed" aria-busy="false" aria-live="polite">
 
-<footer class="site-footer">
+        <!-- Actu 1 (texte très long, avec Collapse Bootstrap) -->
+        <div class="col">
+          <article class="card h-100 shadow-sm news-card" role="article">
+            <img src="assets/affiche1.jpg" class="card-img-top news-img" alt="Participants à l’atelier de formation">
+            <div class="card-body d-flex flex-column">
+              <h1 class="h5 card-title mb-1">ATELIER DE PRÉSENTATION DU PARCOURS DE DIGITALISATION DU MÉCANISME DE REFINANCEMENT DES SYSTÈMES FINANCIERS DÉCENTRALISÉ MEREF-SFD A L’HÔTEL DE L’AMITIE DE BAMAKO</h1>
+              <div class="text-muted small mb-2">Publié le <time datetime="2025-05-18">17/04/2025</time></div>
+
+              <!-- Aperçu court -->
+              <p class="card-text mb-2 line-clamp">
+              Le MEREF –SFD et ses partenaires ont organisé, le jeudi 17 avril, un atelier de haut niveau sur la digitalisation de son processus d'intervention. Cet atelier a été présidé par le ministre de l’Industrie et du Commerce, en lien avec les directives de son Excellence le Président de la Transition, le Général d’Armée Assimi GOITA, Chef de l’Etat de la République du Mali concernant la digitalisation de l’administration publique.            
+              </p>
+
+              <!-- Contenu complet replié -->
+              <div class="collapse" id="actu-2">
+                <div class="card-text">
+                  <p>
+                   L’Objectifs général est de promouvoir la plateforme digitale d’accès et de suivi du crédit lancée par le MEREF-SFD  afin de résoudre les contraintes d’accès des clients des SFD (petites et moyennes entreprises rurales, les femmes et les jeunes surtout en milieux difficiles avec ou sans connexion Internet) aux services financiers et, au-delà, de faciliter  les transactions commerciales avec les acteurs de marché. 
+                  </p>
+                  <p>
+                     En d’autres termes, c’est une solution qui contribue à l’inclusion financière, la bancarisation des populations à faibles revenus et l’accès à l’information financière en vue d’améliorer la gouvernance dans le secteur, en lien avec les directives du Président de la Transition concernant la digitalisation.
+                  </p>
+                  <p>
+                     <div>
+                      <ol>
+                        <li>
+                          <b>Objectifs spécifiques :</b>
+                        </li>
+                        <ul>
+                          <li>
+                            Présenter le niveau de digitalisation du MEREF-SFD à travers le site Web institutionnel du MEREF-SFD dans une optique de marketing digital/ communication globale à grande échelle sur le MEREF-SFD en tant que structure technique du MIC;
+                          </li>
+                          <li>
+                            Présenter le système d’information et de gestion informatique (SIG) du MEREF-SFD contribuant au renforcement de la gouvernance à travers la transparence des informations financières, la sécurité des opérations du crédit et d’assurance agricole.
+                          </li>
+                          <li>
+                            Présenter  de la plateforme digitale d’accès et de suivi du crédit digitalisés dans le secteur de la microfinance «N’GNA SÔRÔ» contribuant à l’inclusion financière des populations à faibles revenus et dans les zones rurales ;
+                          </li>
+                          <li>
+                            Présenter le Guichet Assurance Agricole intégrée à la Plateforme digitale «N’GNA SÔRÔ» en vue de l’accès des acteurs ruraux aux opportunités de sécurisation de leur production dans une logique de partage de risques, de sécurité des investissements, de développement durable et de sécurité alimentaire.
+                          </li>
+                        </ul>
+                        <p>
+                          La digitalisation des services financiers est une réelle opportunité pour les SFD de proposer aux populations vivant dans les zones difficiles d’accès, des services financiers et non financiers innovants et sécurisés pour effectuer des transactions financières sans se rendre aux agences et de réduire les coûts de fonctionnement.
+
+<p>Cependant en matière de digitalisation des processus, les SFD sont confrontés à des défis d’infrastructures technologiques, notamment les systèmes d'information et de gestion, d’éducation financière, de compétences internes, de capacités financières et d’offres en produits et services digitaux et la faible/ qualité de la couverture de réseau internet dans les zones éloignées.</p>
+
+<p>Face à ces constats et conformément à sa mission de mettre à la disposition des SFD des lignes de financement couplées à de l’Assistance Technique afin d’augmenter leur capacité à financer de façon durable les activités des PME, en particulier en milieu rural, le MEREF-SFD a initié en Octobre 2020 un plan de digitalisation en quatre (4) phases inter à savoir :</p>
+
+<p>La création d’un site institutionnel intégrant un périodique (newsletter) et les réseaux sociaux pour se faire connaitre à travers sa structuration, ses zones d’intervention, ses cibles stratégiques, son mode opératoire, ses offres de produits financiers et non financiers au niveau des cibles, du grand public et des partenaires au Mali et en dehors du Mali.</p>
+
+<p>L’archivage électronique pour faciliter et rendre plus efficace et efficient le traitement et l’utilisation des en tout temps et à distance.</p>
+
+<p>le programme intitulé « N’GNA SÔRÔ ! » pour l’accès et suivi Digitalisés du crédit. Il s’agit d’une solution digitale destinée aux SFD avec pour objectif de favoriser l’accès du crédit aux acteurs de la chaine de valeur agricole surtout dans les zones difficiles en d’accroître davantage l’inclusion financière et la bancarisation tout en accélérant et diminuant les coûts des transactions, notamment en milieu rural.</p>
+
+<p>Il cible en priorité l’accès des acteurs de base particulièrement les femmes et les jeunes à des services financiers numériques, contribuant ainsi à minimiser les risques auxquels ils sont exposés et faciliter l’engagement et le développement des relations de long-terme au sein des chaines de valeur des filières Agro-pastorales. Pour ce faire, le programme « Accès et Suivi Digitalisés du Crédit » consiste à accompagner les SFD dans le développement et la mise en œuvre d’une stratégie digitale afin d’améliorer les performances financières et sociales et ainsi créer de nouvelles opportunités d’affaires pour les bénéficiaires cibles.</p>
+
+<p>L’utilisation des services financiers numériques via la plateforme numérique « N’GNA SÔRÔ ! » permettra aux groupes cibles de réaliser des transactions de dépôt et de retrait à l’aide de leur téléphone mobile sans devoir se déplacer à l’agence. De même, un portail web connectée aux systèmes d’information des SFD leur permettra d’effectuer toutes les opérations en continu et en temps réel.</p>
+
+<p/>Le programme de digitalisation qui a concerné le Système d’information et de gestion  informatisé (SIG) du MEREF-SFD et la Plateforme digitale « N’GNA SÔRÔ ! » a été réalisé en partenariat avec le projet SUGU YIRIWA de CARE Mali avec l’expertise du cabinet DATA FLAQ’S TECHNOLOGIE (DFT), en tant que concepteur et chargé de l’assistance technique en phase d’exécution.</p>
+
+<p>Dans l’optique de présenter les services financiers numériques ainsi développés à l’ensemble des partenaires et parties, un atelier de partage et de lancement officiel de la plateforme numérique « N’GNA SÔRÔ ! » a été organisé en novembre 2023 sous la Présidence de l’actuel ministre de l’Industrie et du Commerce.</p>
+
+<p>Le déploiement de la Plateforme accessible en mode non connecté (SSD), au regard des défis multiples en matière d’accès à l’Internet surtout, a connu du retard lié à l’obtention de l’autorisation d’émission de monnaie électronique selon les normes en la matière.</p>
+
+<p>En attendant, le MEREF-SFD a complété les fonctionnalités, y compris l’intégration de langues locales, renforcer la sécurité de la plateforme  et mobiliser de nouveaux partenariats stratégiques.
+                        </p>
+                        <li>
+                          <b>Résultats attendus : </b>
+                        </li>
+                        <ul>
+                          <li>Le niveau de digitalisation /dématérialisation du MEREF-SFD, en tant que structure technique du MIC, à travers les informations et supports disponibles en ligne (site, réseaux sociaux, SIG…) sans frais sont démontrées et mieux connus en tant que contribution du MIC dans la mise en œuvre des directives du Président de la Transition relativement à la digitalisation.</li>
+                          <li>
+                            Le MEREF-SFD est mieux connu à travers ses  modes d’intervention, ses cibles stratégiques, ses zones d’interventions , ses résultats et impacts dans l’inclusion financière en vue  de leur appropriation , du renforcement de la gouvernance à travers l’accès facile et la transparence des informations financières, la sécurité des opérations du crédit et d’assurance agricole ainsi que d’attirer l’attention sur l’importance du soutien institutionnel face aux défis majeurs.
+                          </li>
+                          <li>
+                            La plateforme digitale d’accès et de suivi du crédit digitalisés dans le secteur de la microfinance «N’GNA SÔRÔ» contribuant à l’inclusion financière des populations à faibles revenus et dans les zones rurales ainsi que les contraintes de son développement sont mieux connues par l’ensemble des acteurs cibles et les décideurs stratégiques et les partenaires.
+                          </li>
+                          <li>
+                            Présenter le Guichet Assurance Agricole intégrée au crédit et accessible via la plateforme digitale «N’GNA SÔRÔ» pour l’accès des acteurs ruraux aux opportunités de sécurisation de leur production dans une logique de partage de risques, de sécurité des investissements, de développement durable et de sécurité alimentaire est présentée en vue de faciliter son intégration dans le dispositif institutionnel prévue dans le cadre de loi d’orientation agricole (LOA).
+                          </li>
+                        </ul>
+                      </ol>
+                     </div>
+                  </p>
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" href="#actu-2"
+                   role="button" aria-expanded="false" aria-controls="actu-2">Lire la suite</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Actu 2 (texte très long, avec Collapse Bootstrap) -->
+        <div class="col">
+          <article class="card h-100 shadow-sm news-card" role="article">
+            <img src="assets/affiche2.jpg" class="card-img-top news-img" alt="Participants à l’atelier de formation">
+            <div class="card-body d-flex flex-column">
+              <h1 class="h5 card-title mb-1">JOYEUX ANNIVERSAIRE AU MEREF-SFD</h1>
+              <div class="text-muted small mb-2">Publié le <time datetime="2025-04-05">05/04/2024</time></div>
+
+              <!-- Aperçu court -->
+              <p class="card-text mb-2 line-clamp">
+                Le Mécanisme de Refinancement des Systèmes Financiers Décentralisés du Mali ( MEREF-SFD) a soufflé ses premières six (6 bougies) le samedi 06 Avril 2025. Un outil investi d'une mission de contribuer dans l'atteinte des objectifs stratégiques de la Politique Nationale de Développement de la Microfinance du Mali, lancé officiellement le 5 avril 2019,   a rempli tous les espoirs placés en lui par le gouvernement malien et ses partenaires techniques et financiers (FIDA, coopérations Danoise et Canadienne) mais aussi et surtout par les acteurs professionnels du secteur de la microfinance.
+              </p>
+
+              <!-- Contenu complet replié -->
+              <div class="collapse" id="actu-2">
+                <div class="card-text">
+                  <p>
+                    <b>Au terme de cette periode, tous les objectifs à lui assignés ont été dépassés.</b>
+                  </p>
+                  <p>
+                    Le MEREF-SFD a remplit, non sans difficulté au regard de la faiblesse des moyens d'intervention et du contexte d'évolution, les espoirs des acteurs à faibles revenus n'ayant pas un accès adéquat au financement pour développer leurs activités économiques et professionnelles (les organisations paysannes, les PME dans la la chaîne des valeurs agricoles comme,les femmes et les jeunes, surtout en milieu rural) comme l'atteste ce bilan sommaire en fin 2023 :
+                  </p>
+                  <ul>
+                    <li>Une équipe de coordination technique totalement constituée et bien fonctionnelle ;</li>
+                    <li>Des ressources prêtables toutes lignes confondues de 8, 963 milliards FCFA ;</li>
+                    <li>Un volume total de refinancement, en revolving, de 30, 240 Milliards FCFA ;</li>
+                    <li>177 DAT ont été mis en place en faveur des 16 SFD partenaires ;</li>
+                    <li>44 789 projets économiques financés par les SFD pour 582 015 bénéficiaires dont 306 859 femmes. Ces financements ont été utilisés pour l’achat d'intrants et d'équipements agricoles, dans les activités agropastorales, l’artisanat et le petit commerce ;</li>
+                    <li>Une plateforme digitalisée  pour l’accès et le suivi du crédit dénommée  « N’GNA SÔRÔ! » ou « J’ai bien reçu! » dont le lancement a lieu en novembre 2023 sous ma présidence est opérationnelle ;</li>
+                    <li>En plus des deux guichets d’Investissement et d’Assistance Technique initiaux, deux nouveaux guichets dédiés à la Garantie et l’Assurance agricoles et au Financement vert sont opérationnels ; </li>
+                    <li>Une trentaine de session de formation sur des thématiques innovants et variés   ont été réalisées au profit de 148 cadres de SFD pour renforcer leur professionnalisation et leur  gouvernance ;</li>
+                    <li>De nouveaux partenariats ont vu le jour dont celui avec la Coopération Allemande, à travers la KfW et AgroFinance, et d’autres sont en très bonne voie ;
+
+</li>
+                    <li>Un siège social est en cours de construction ;</li>
+                    <li>Le processus de la transformation institutionnelle a été introduit dans le circuit d’approbation du Gouvernement  pour doter le MEREF-SFD d’un statut juridique approprié lui permettant d’atteindre la plénitude de ses fonctions, de mieux répondre aux besoins du secteur de la microfinance et de financement de l’économie.</li>
+                  </ul>
+                  <p>En somme, nous constatons que malgré le contexte difficile, ces résultats, vérifiables sur le terrain, témoignent de l’utilité et de la performance du MEREF-SFD.</p>
+                  <p>L'équipe, rompue à la tâche, avec l'appui des partenaires techniques et financiers stratégiques et des partenaires stratégiques opérationnels (Projet INCLUSIF, CPA/SFD et APSFD) continue, sous le leadership du ministre chargé de la Promotion de la Microfinance, le développement inexorable de l'outil MEREF-SFD SFD.</p>
+                  <p>
+                    En cours depuis janvier 2023, sa transformation institutionnelle, vusant à le doter d'un statut juridique approprié à l'exercice de la plénitude de ses fonctions, lui permettra de fournir de nouvelles opportunités de Refinancement pour le secteur de la microfinance dont l'importance et la place dans l'inclusion financière n'est plus à démontrer au Mali. 
+                  </p>
+                  <p><b>Vivement la transformation !</b></p>
+                  <p><b>Monsieur Madani KOUMARE, Coordinateur CTC MEREF-SFD</b></p>
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" href="#actu-2"
+                   role="button" aria-expanded="false" aria-controls="actu-2">Lire la suite</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Actu 3 (texte très long, avec Collapse Bootstrap) -->
+        <div class="col">
+          <article class="card h-100 shadow-sm news-card" role="article">
+            <img src="assets/affiche3.jpg" class="card-img-top news-img" alt="Participants à l’atelier de formation">
+            <div class="card-body d-flex flex-column">
+              <h1 class="h5 card-title mb-1">LANCEMENT OFFICIEL DE N'GNA SÔRÔ</h1>
+              <div class="text-muted small mb-2">Publié le <time datetime="2023-11-30">30/11/2023</time></div>
+
+              <!-- Aperçu court -->
+              <p class="card-text mb-2 line-clamp">
+                Quatre interventions ont marqué la cérémonie de lancement de la plateforme digitale « N’GNA SÔRÔ » le jeudi 30 novembre 2023 à Bamako. A travers des salutations adressées aux premiers acteurs ; au cabinet du ministère de tutelle ; à la Banque Centrale des Etats de l’Afrique de l’Ouest (BCEAO) ; la les opérateurs et régulateurs des télécommunications et enfin le personnel du Mécanisme de Refinancement des Systèmes Financiers Décentralisés MEREF – SFD, le Coordinateur, Monsieur Madani KOUMARE a estimé payer des dettes. A la suite du coordinateur, la plateforme a été présentée à travers un sketch réalisé par une troupe de théâtre malienne avant les autres interventions.
+              </p>
+
+              <!-- Contenu complet replié -->
+              <div class="collapse" id="actu-2">
+                <div class="card-text">
+                  <p>
+                    <b>Pour le président de l’ Association Professionnelle des SFD (APSFD), l’outil répond assez aux besoins actuels des SFD pour mieux servir les clients résidents en milieu rural.</b>
+                  </p>
+                  <p>
+                    <b>Prenant la parole, le secrétaire général du ministère de l’industrie et du commerce a, au nom du ministre présent, formulé le vœux d’une meilleure appropriation de la Solution Digitale « N’GNA SÔRÔ par les bénéficiaires pour leur bonheur.</b>
+                  </p>
+                  <p>
+                    Tout ému comme ses prédécesseurs au micro, le ministre n’a pu s’empêcher de prendre la parole pour faire des témoignages de son séjour long de trente ans dans une banque de la place. En effet, le ministre a déploré l’inadéquation de l’offre et la demande des populations cibles, ce qui fut un réel goulot d’étranglement. Avec ce nouvel outil, le ministre salue la solution obtenue grâce aux efforts des divers acteurs et partenaires, qu’il a tenu a fortement saluer. Le ministre n’a pas manqué de souligner le sous financement de l’économie à cause de cette inadéquation, car la formation des banquiers n’est pas adaptée aux besoins de la majorité de la population dans l’espace. Pour lui, la digitalisation est un moyen sûre pour l’avenir. « je suis heureux du bon qualitatif pour l’accès des ruraux au financement de l’économie grâce à Solution Digitale « N’GNA SÔRÔ », a conclu Monsieur Moussa Alassane DIALLO, ministre de l’industrie et du commerce avec de prononcer le mot de lancement de ladite solution.
+                  </p>
+            
+<p>La Solution Digitale « N’GNA SÔRÔ » vise à favoriser l’accès rapide et sécurisé au crédit par les organisations paysannes, les micro entreprises rurales et des populations à faibles revenus et d’autres acteurs dans la chaine de valeurs agricole vivant dans les zones difficiles d’accès et accélérant ainsi l'inclusion financière et la dématérialisation des opérations de crédits. Pour ce faire, le programme Accès Digital au Crédit du MEREF-SFD consiste à accompagner les SFD partenaires dans le développement et la mise en œuvre de leur stratégie digitale afin d’améliorer leurs performances financières et sociales et de leur permettre d’accéder à de nouvelles opportunités et de mieux servir leurs clients cibles (acteurs économiques non négligeables en marge du système financier classique et qui sont engagés dans des activités génératrices de revenus avec des besoins de financement non satisfaits) durable.</p>
+<p><b>Sous la modération de Mme DIARRA Assa SYLLA, conseillère technique au ministère de l’industrie et du commerce, des échanges fructueux ont eu lieux dans la salle. Il s’agissait  de questions posées et des contributions faites par les participants. Les éclairages nécessaires ont été faits par les personnes ressources présentes parmi les promoteurs, les partenaires comme la BCEAO, les SFD et même certains bénéficiaires.</b></p>
+
+                </div>
+              </div>
+
+              <div class="mt-auto">
+                <a class="btn btn-outline-primary btn-sm" data-bs-toggle="collapse" href="#actu-2"
+                   role="button" aria-expanded="false" aria-controls="actu-2">Lire la suite</a>
+              </div>
+            </div>
+          </article>
+        </div>
+        
+            </div>
+          </article>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+ <footer class="site-footer">
   <div class="container">
     <div class="cols">
       <div>
         <h4>MEREF‑SFD</h4>
-        <p class="small">Remplacez ce texte par une description officielle de votre mission et de vos activités.</p>
+        <p class="small">Le développement du secteur de la micro finance est un axe stratégique majeur dans les politiques publiques de mise en œuvre de la vision du gouvernement pour bâtir un Mali nouveau.</p>
       </div>
       <div>
         <h4>Liens</h4>
-        <p class="small"><a href="apropos.html">À propos</a><br/>
-        <a href="projets.html">Projets</a><br/>
-        <a href="actualites.html">Actualités</a></p>
+        <p class="small"><a href="apropos.html">Présentation</a><br/>
+        <a href="actualites.html">Actualités et Publications</a><br/>
+        <a href="contact.html">Contacts</a></p>
       </div>
       <div>
         <h4>Contacts</h4>
-        <p class="small">Email&nbsp;: contact@votredomaine.ml<br/>Tél&nbsp;: +223 00 00 00 00<br/>Adresse&nbsp;: Bamako, Mali</p>
+        <p class="small">Email&nbsp;: infosmerefsfd@gmail.com<br/>Tél&nbsp;: +223 20 29 40 31<br/>Adresse&nbsp;: Bamako, Mali</p>
       </div>
     </div>
     <hr class="sep"/>
@@ -69,7 +309,9 @@
   </div>
 </footer>
 
+<!-- Bootstrap JS (pour les composants éventuels) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<!-- Ton script -->
 <script src="projets.js"></script>
-
 </body>
 </html>

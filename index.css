@@ -34,18 +34,40 @@ a:hover { text-decoration: none;}
 .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
 /* Header / Nav */
+
 header.site-header {
   position: sticky; top: 0; z-index: 50;
   background: #fff; border-bottom: 1px solid #e5e7eb;
 }
-.navbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 0; }
+
+.navbar {
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  gap: 16px; 
+  padding: 10px 0;
+}
+
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--primary); letter-spacing: .5px; }
 .logo img { width: 40px; height: 40px; border-radius: 6px; }
 
-.nav-links { display: flex; gap: 14px; flex-wrap: wrap; }
-.nav-links a { padding: 10px 12px; border-radius: 10px; font-weight: 600; color: #0f172a; }
-.nav-links a.active, .nav-links a:hover { background: rgba(10,107,74,.1); }
+/* 🔧 Ajout important : aligner verticalement tous les enfants (y compris le <div class="dropdown">) */
+.nav-links {
+  display: flex; gap: 0px; flex-wrap: wrap;
+  align-items: center; /* NEW */
+}
 
+/* Style uni pour tous les liens de nav (y compris le .dropdown-toggle) */
+.nav-links a {
+  padding: 10px 12px; border-radius: 10px; font-weight: 600; color: #0f172a; text-decoration: none;
+}
+.nav-links a.active,
+.nav-links a:hover { background: rgba(10,107,74,.1); }
+
+/* (Optionnel) S’assure que le wrapper dropdown s’aligne correctement */
+.nav-links .dropdown { display: flex; align-items: center; }
+
+/* Bouton burger */
 .nav-toggle {
   display: none; background: none; border: 0; font-size: 28px; line-height: 1; cursor: pointer;
 }
@@ -123,7 +145,6 @@ header.site-header {
 
 /* Mot ministre */
 
-
 .mot-ministre-section .container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
   .mot-ministre { line-height: 1.7; font-size: 1rem; color: #111; }
   .mot-ministre .photo-droite {
@@ -177,33 +198,70 @@ header.site-header {
   }
 
 /* Partners */
-.partner {
-    background-image: var(--logo);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; /* garde les proportions du logo */
-    border: 1px solid #eee;
-    border-radius: .75rem; /* proche de rounded-3 */
-    transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-    filter: grayscale(.2);
-  }
-  .partner:hover,
-  .partner:focus-visible {
-    transform: translateY(-2px);
-    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,.12);
-    filter: grayscale(0);
-    outline: none;
-  }
 
-#actus-title {
-    text-align: center;
-  }
+/* PARTENAIRES – bandeau de logos alignés sur le bas du titre */
+.partenaires .logos { gap: clamp(.5rem, 1.2vw, 1rem); }
 
-/* CTA */
-.cta { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; background: #0a573e; color: #fff; border-radius: 18px; padding: 22px; }
-.cta a.button { background: #fff; color: var(--primary); padding: 10px 14px; border-radius: 12px; font-weight: 700; border: 2px solid transparent; }
-.cta a.button:hover { border-color: #fff; background: transparent; color: #fff; }
+.partner-logo{
+  display: block;
+  width: clamp(72px, 20vw, 150px);
+  height: clamp(40px, 10vw, 150px);
+  background: no-repeat center / contain var(--logo);
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  opacity: .95;
+  transition: transform .2s ease, opacity .2s ease, box-shadow .2s ease;
+}
+.partner-logo:hover{
+  transform: translateY(-2px);
+  opacity: 1;
+  box-shadow: 0 6px 20px rgba(0,0,0,.08);
+}
 
+@media (max-width: 576px){
+  .partenaires-head{ flex-direction: column; align-items: center; gap: .75rem; }
+  .partenaires .logos{ justify-content: center; }
+}
+
+/* Titre PARTENAIRES — style élégant */
+.titre-partenaires{
+  /* belle typo de titrage (fonctionne même sans Google Fonts) */
+  font-family: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+  font-weight: 700;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.1;
+
+  /* look */
+  color: var(--text);
+  text-transform: uppercase;          /* mets en minuscules si tu préfères */
+  letter-spacing: .06em;
+  display: inline-block;
+  position: relative;
+  padding: .05em .2em .35em;
+
+  /* léger surlignage derrière le texte */
+  background-image: linear-gradient(180deg, transparent 60%, rgba(24,169,87,.18) 0);
+  background-repeat: no-repeat;
+}
+
+/* barre d’accent dégradée sous le titre */
+.titre-partenaires::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: clamp(64px, 12vw, 140px);
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  opacity: .95;
+}
+
+/* ajustements mobiles */
+@media (max-width: 576px){
+  .titre-partenaires{ letter-spacing: .04em; }
+  .titre-partenaires::after{ height: 4px; bottom: -6px; }
+}
 
 
 /* Footer */
