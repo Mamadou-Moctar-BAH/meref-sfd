@@ -6,6 +6,17 @@ document.addEventListener("click", (e) => {
   }
 });
 
+// Nav bar
+
+const btn = document.querySelector("[data-nav-toggle]");
+const nav = document.getElementById("primary-nav");
+if (btn && nav) {
+  btn.addEventListener("click", () => {
+    const open = nav.classList.toggle("open");
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+}
+
 // Count-up for stats
 (function () {
   const els = document.querySelectorAll("[data-count-to]");

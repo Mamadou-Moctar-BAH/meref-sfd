@@ -59,7 +59,9 @@ header.site-header {
   padding: 10px 12px; border-radius: 10px; font-weight: 600; color: #0f172a; text-decoration: none;
 }
 .nav-links a.active,
-.nav-links a:hover { background: rgba(10,107,74,.1); }
+.nav-links a:hover { 
+  background: transparent; /* Enlève l'ombre verte */
+}
 
 /* (Optionnel) S’assure que le wrapper dropdown s’aligne correctement */
 .nav-links .dropdown { display: flex; align-items: center; }
