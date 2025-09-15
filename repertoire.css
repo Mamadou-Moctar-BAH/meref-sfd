@@ -72,6 +72,121 @@ header.site-header {
 }
 
 
+/* Conteneur global */
+.map-embed{
+  max-width: 1100px;
+  margin-inline: auto;
+  padding: clamp(8px, 2vw, 16px);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* IFRAME responsive, coins arrondis et ombre */
+.map-embed__frame{
+  width: 100%;
+  /* Aspect ratio natif : parfait pour la réactivité */
+  aspect-ratio: 16 / 9;
+  /* Sur mobile on affiche plus de hauteur pour mieux lire la carte */
+  /* (Voir media query plus bas) */
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background: #f1f5f9;  /* couleur de fond pendant le lazy-loading */
+  display: block;
+}
+
+/* Lien "Ouvrir dans Google Maps" stylé comme un bouton discret */
+.map-embed__open{
+  display: inline-block;
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--brand);
+  font-weight: 600;
+  line-height: 1;
+  transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease, border-color .15s ease;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+
+.map-embed__open:hover{
+  border-color: color-mix(in oklab, var(--brand) 30%, var(--border));
+  box-shadow: 0 6px 14px rgba(0,0,0,.08);
+  transform: translateY(-1px);
+}
+
+.map-embed__open:focus-visible{
+  outline: 3px solid color-mix(in oklab, var(--brand) 30%, #fff);
+  outline-offset: 2px;
+}
+
+.map-embed__open:active{
+  transform: translateY(0);
+}
+
+/* ====== Petits écrans ====== */
+@media (max-width: 640px){
+  .map-embed__frame{
+    /* plus haut sur mobile pour une carte plus confortable */
+    aspect-ratio: 4 / 5;         /* ~portrait */
+    min-height: 320px;           /* garde-fou si l'aspect-ratio est trop petit */
+    border-radius: 14px;
+  }
+  .map-embed__open{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    padding: 12px 16px;
+  }
+}
+
+/* ====== Grands écrans ====== */
+@media (min-width: 1280px){
+  .map-embed{
+    max-width: 1200px;
+  }
+  .map-embed__frame{
+    border-radius: 18px;
+  }
+}
+
+/* ====== Thème sombre auto ====== */
+@media (prefers-color-scheme: dark){
+  :root{
+    --surface: #0b1220;
+    --ink: #e5e7eb;
+    --muted: #94a3b8;
+    --border: #1f2937;
+    --shadow: 0 10px 30px rgba(0,0,0,.45);
+  }
+  .map-embed{
+    color: var(--ink);
+  }
+  .map-embed__frame{
+    background: #0f172a;
+    box-shadow: var(--shadow);
+  }
+  .map-embed__open{
+    background: #0b1220;
+    border-color: var(--border);
+    color: #93c5fd;
+    box-shadow: 0 1px 2px rgba(0,0,0,.25);
+  }
+  .map-embed__open:hover{
+    border-color: #334155;
+  }
+}
+
+/* ====== Accessibilité & confort ====== */
+@media (prefers-reduced-motion: reduce){
+  .map-embed__open{
+    transition: none;
+  }
+}
+
+
 /* Footer */
 footer.site-footer { background: var(--dark); color: #cbd5e1; padding: 30px 0; margin-top: 40px; }
 footer .cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 18px; }
